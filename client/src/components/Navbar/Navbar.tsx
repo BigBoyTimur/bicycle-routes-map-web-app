@@ -1,3 +1,4 @@
+import './navbar.sass';
 import {Link} from "react-router-dom";
 import {useContext} from "react";
 import {UserContext} from "../../../context/userConext.tsx";
@@ -12,13 +13,12 @@ function Navbar() {
         <nav className="nav">
             <div className="nav__container">
                 <div className="nav__logo-container">
-                    Велодорожки
+                    <Link className="nav__link" to="/">Главная</Link>
                 </div>
                 <div className="nav__menu">
-                    <Link to="/">Главная</Link>
-                    <Link to="/register">Регистрация</Link>
-                    <Link to="/login">Вход</Link>
-                    {!user && <button onClick={logout}>Выйти</button>}
+                    {!user && <Link className="nav__link" to="/register">Регистрация</Link>}
+                    {!user && <Link className="nav__link" to="/login">Вход</Link>}
+                    {user && <button className="nav__button" onClick={logout}>Выйти</button>}
                 </div>
             </div>
         </nav>
