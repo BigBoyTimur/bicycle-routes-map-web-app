@@ -1,5 +1,5 @@
-import {useContext} from "react";
-import {UserContext} from "../../context/userConext.tsx";
+import {useContext, useEffect} from "react";
+import {UserContext} from "../context/userConext.jsx";
 
 function Dashboard() {
     const {user} = useContext(UserContext)

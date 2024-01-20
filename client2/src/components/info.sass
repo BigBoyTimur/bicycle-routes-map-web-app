@@ -1,0 +1,37 @@
+.info
+    min-height: 90vh
+    display: flex
+    align-items: center
+    // .info__container
+    &__container
+        max-width: 1000px
+        margin: 0 auto
+        padding: 0 15px
+        text-align: center
+    // .info__title
+    &__title
+        font-weight: 700
+        font-size: 50px
+        margin-bottom: 50px
+    // .info__text
+    &__text
+        // .info__text_p1
+        &_p1
+            margin-bottom: 15px
+        // .info__text_p2
+        &_p2
+    &__link-container
+    &__link
+        display: inline-block
+        background: #000
+        color: white
+        text-decoration: none
+        padding: 15px
+        border-radius: 5px
+        transition: background-color .2s
+        @media (any-hover: hover)
+            &:hover
+                background: grey
+
+    svg
+        max-width: 233px

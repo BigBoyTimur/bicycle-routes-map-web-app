@@ -1,13 +1,9 @@
 import axios  from "axios";
 import {createContext, useEffect, useState} from "react";
 
-export interface UserContextProps{
-    user: { userName: string, userId: number } | null,
-    setUser?: any
-}
-export const UserContext = createContext<UserContextProps>({user: null});
+export const UserContext = createContext({user: null});
 
-export function UserContextProvider({children}: any) {
+export function UserContextProvider({children}) {
     const [user, setUser] = useState(null);
     useEffect(() => {
         if(!user) {

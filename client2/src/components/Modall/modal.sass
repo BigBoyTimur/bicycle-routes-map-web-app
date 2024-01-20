@@ -1,0 +1,23 @@
+.modal
+    height: 100vh
+    width: 100vw
+
+    background-color: rgba(0, 0, 0, 0.4)
+    position: fixed
+    left: 0
+    right: 0
+    z-index: 100
+    display: flex
+    justify-content: center
+    align-items: center
+    transform: scale(0)
+
+    // .modal__conent
+    &__conent
+        padding: 20px
+        border-radius: 12px
+        background-color: #fff
+
+
+.modal.active
+    transform: scale(1)

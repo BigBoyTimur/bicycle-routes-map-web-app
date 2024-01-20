@@ -13,6 +13,9 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended: false}));
 
 app.use('/', require('./routes/authRoutes'));
+app.use('/', require('./routes/bikeRoutes'));
+app.use('/', require('./routes/userPathRoutes'));
+
 
 const port = 8000;
 
